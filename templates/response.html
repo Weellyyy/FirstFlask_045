@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pendaftaran</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="response-container">
+        <h1>Pendaftaran Berhasil</h1>
+        <p><strong>Nama:</strong> {{ nama }}</p>
+        <p><strong>Umur:</strong> {{ umur }}</p>
+        <p><strong>Alamat:</strong> {{ alamat }}</p>
+        <p><strong>Jenis Kelamin:</strong> {{ jenis_kelamin }}</p>
+        <p><strong>Keluhan:</strong> {{ keluhan }}</p>
+        <p><strong>Tanggal Pendaftaran:</strong> {{ tanggal_pendaftaran }}</p>
+        <p><strong>Jam Pendaftaran:</strong> {{ jam_pendaftaran }}</p>
+        <a href="/" class="back-button">Kembali ke Form</a>
+    </div>
+</body>
+</html>

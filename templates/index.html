@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Rumah Sakit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Form Pendaftaran Rumah Sakit</h1>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="Nama">Nama Lengkap:</label>
+                <input type="text" id="Nama" name="Nama" placeholder="Masukkan nama Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="Umur">Umur:</label>
+                <input type="number" id="Umur" name="Umur" placeholder="Masukkan umur Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="Alamat">Alamat:</label>
+                <input type="text" id="Alamat" name="Alamat" placeholder="Masukkan alamat Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="Jenis_Kelamin">Jenis Kelamin:</label>
+                <select id="Jenis_Kelamin" name="Jenis_Kelamin" required>
+                    <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Keluhan">Keluhan:</label>
+                <textarea id="Keluhan" name="Keluhan" rows="4" placeholder="Deskripsikan keluhan Anda" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="Tanggal_Pendaftaran">Tanggal Pendaftaran:</label>
+                <input type="date" id="Tanggal_Pendaftaran" name="Tanggal_Pendaftaran" required>
+            </div>
+            <div class="form-group">
+                <label for="Jam_Pendaftaran">Jam Pendaftaran:</label>
+                <input type="time" id="Jam_Pendaftaran" name="Jam_Pendaftaran" required>
+            </div>
+            <button type="submit">Daftar</button>
+        </form>
+    </div>
+</body>
+</html>
